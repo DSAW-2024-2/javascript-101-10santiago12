@@ -7,7 +7,7 @@ function sum(a, b)
   return;
   }
   
-    let suma = a + b;
+  let suma = a + b;
   return suma;
 }
 
@@ -42,17 +42,28 @@ function findLargest(arr)
 // Count Vowels in a String
 function countVowels(str) 
 {
-  // Add your code here
+  let conta=0;
+  const vocales = ["a", "e", "i", "o", "u"];
+
+  for(let char of str)
+  {
+    if(vocales.includes(char))
+    {
+      conta++;
+    }
+  }
+  return conta;
+  
 }
 
 // Check if a Number is Prime
 function isPrime(n) 
 {
   if (!Number.isFinite(n))
-    {
+  {
     console.log("Los datos de entrada no son adecuados");
     return;
-    }
+  }
   
   if (n <= 1) 
     return false;
